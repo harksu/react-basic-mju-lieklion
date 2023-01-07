@@ -1,7 +1,14 @@
 import "./App.css";
+import React from "react";
+import { RecoilRoot } from "recoil";
+import Board from "./components/Board";
 
 function App() {
-  return <div className="App">틱택토 프로젝트 초기 셋팅중입니다.</div>;
+  return (
+    <RecoilRoot>
+      <Board />;
+    </RecoilRoot>
+  );
 }
 
 export default App;
