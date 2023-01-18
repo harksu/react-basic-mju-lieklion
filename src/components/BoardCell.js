@@ -1,7 +1,7 @@
-import "../styles/BoardCellStyle.scss";
-import { isTurn, pickCell } from "../atoms/atom";
 import { useState } from "react";
 import { useRecoilState } from "recoil";
+import { isTurn, pickCell } from "../atoms/atom";
+import "../styles/BoardCellStyle.scss";
 
 const BoardCell = ({ number, winner }) => {
   const [turn, setTurn] = useRecoilState(isTurn);
@@ -26,7 +26,7 @@ const BoardCell = ({ number, winner }) => {
     const newArray = [...pickArray];
     newArray[number] = mark;
     setPickArray(newArray);
-  };
+  }; // 이거 함수 분리하면 더 이쁠 것 같은데 사용을 여기서만 하는데 나누는게 더 이쁜건가?
 
   return (
     <div
