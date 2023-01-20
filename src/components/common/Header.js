@@ -26,8 +26,8 @@ const Header = () => {
 
 const HeaderContainer = styled.div`
   display: flex;
-  position: fixed;
-  top: 0px;
+  //position: fixed;
+  //top: 0px; 생각해보니까 굳이 이걸 넣어야되나
   width: 100%;
   height: 60px;
   align-items: center;
