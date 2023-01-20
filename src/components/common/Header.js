@@ -48,6 +48,9 @@ const HeaderMenuBox = styled.div`
 const HeaderMenuItem = styled.h3`
   font-size: 15px;
   margin: 0 5px 0 5px;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 const HeaderSiedMenuBox = styled.div`
@@ -61,6 +64,9 @@ const HeaderSideMenu = styled.div`
   display: flex;
   width: 30%;
   justify-content: space-around;
+  & > :hover {
+    cursor: pointer;
+  }
 `;
 
 export default Header;
