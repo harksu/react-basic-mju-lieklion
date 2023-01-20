@@ -1,14 +1,9 @@
-import "./App.css";
 import React from "react";
 import { RecoilRoot } from "recoil";
-import Board from "./components/Board";
+import "./App.css";
 
 function App() {
-  return (
-    <RecoilRoot>
-      <Board />;
-    </RecoilRoot>
-  );
+  return <RecoilRoot></RecoilRoot>;
 }
 
 export default App;
