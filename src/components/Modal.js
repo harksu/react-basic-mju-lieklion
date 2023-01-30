@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { isModal } from "../atoms/atom";
 
 const Modal = ({ imgSrc }) => {
-  const [isShow, setIsShow] = useRecoilState(isModal);
+  const [, setIsShow] = useRecoilState(isModal);
   const closeModal = () => {
     setIsShow(false);
   };
