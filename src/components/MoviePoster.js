@@ -1,12 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
+import { useRecoilState } from "recoil";
 import styled from "styled-components";
+
+import Modal from "./Modal";
 const MoviePoster = ({ imgSrc, grade, index }) => {
+  const [isShow, setIsShow] = useState(false);
+
+  const showModal = () => {
+    if (!grade) return;
+    setIsShow(!isShow);
+  };
+
   return (
-    <MoviePosterImage>
+    <MoviePosterImage onClick={showModal}>
+      {isShow && <Modal imgSrc={imgSrc} />}
       {grade ? (
         <>
-          <Test alt="rankedMovie" src={grade[index]} />
-          <Test alt="rankedMovie" src={imgSrc} />
+          <Test2 alt="rankedMovie" src={grade[index]} />
+          <Test2 alt="rankedMovie" src={imgSrc} />
         </>
       ) : (
         <Test alt="rankedMovie" src={imgSrc} />
@@ -25,12 +36,15 @@ const MoviePosterImage = styled.div`
   }
 `;
 
-const MovieImage = styled.div``;
-
 const Test = styled.img`
-  object-fit: cover;
-  width: 200px;
+  //object-fit: cover;
+  width: 300px;
   height: 200px;
+`;
+
+const Test2 = styled(Test)`
+  width: 150px;
+  height: 250px;
 `;
 
 export default MoviePoster;

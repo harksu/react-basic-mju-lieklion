@@ -3,7 +3,7 @@ import styled from "styled-components";
 import MoviePoster from "./MoviePoster";
 
 const MovieList = ({ title, movieSrcArray, grade }) => {
-  console.log(grade);
+  //console.log(grade);
   return (
     <>
       <MovieListTitle>{title}</MovieListTitle>
