@@ -6,6 +6,7 @@ import {
   RANKED_MOVIES_SRC,
   FOREGIN_MOVIES_SRC,
   SERIES_MOVIES_SRC,
+  MOVIE_RANKED,
 } from "./../datas/movieImageSrc";
 
 const MainPage = () => {
@@ -15,9 +16,10 @@ const MainPage = () => {
       <MovieList
         title="오늘 대한민국의 TOP 10영화"
         movieSrcArray={RANKED_MOVIES_SRC}
+        grade={MOVIE_RANKED}
       />
-      <MovieList title="해외 시리즈" movieSrcArray={FOREGIN_MOVIES_SRC} />
-      <MovieList title="시리즈" movieSrcArray={SERIES_MOVIES_SRC} />
+      <MovieList title="해외 시리즈" movieSrcArray={RANKED_MOVIES_SRC} />
+      <MovieList title="시리즈" movieSrcArray={RANKED_MOVIES_SRC} />
     </MainPageContainer>
   );
 };
