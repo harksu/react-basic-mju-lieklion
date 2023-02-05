@@ -3,13 +3,12 @@ import styled from "styled-components";
 import MoviePoster from "./MoviePoster";
 
 const MovieList = ({ title, movieSrcArray, grade }) => {
-  //console.log(grade);
   return (
     <>
       <MovieListTitle>{title}</MovieListTitle>
       <MovieListContainer>
         {movieSrcArray?.map((item, index) => (
-          <MoviePoster imgSrc={item} key={index} grade={grade} index={index} />
+          <MoviePoster imgItem={item} key={index} grade={grade} index={index} />
         ))}
       </MovieListContainer>
     </>

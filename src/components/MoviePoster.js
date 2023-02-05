@@ -1,9 +1,14 @@
 import React, { useState } from "react";
-import { useRecoilState } from "recoil";
 import styled from "styled-components";
 
 import Modal from "./Modal";
-const MoviePoster = ({ imgSrc, grade, index }) => {
+
+const MoviePoster = ({ imgItem, grade, index }) => {
+  const imgSrc = imgItem.poster_path;
+  const movieOverview = imgItem.overview;
+  const IMAGE_BASE_URL = `https://image.tmdb.org/t/p/w500`; //이것도 나중에 env로 빼기
+
+  const IMG = `${IMAGE_BASE_URL}${imgSrc}`;
   const [isShow, setIsShow] = useState(false);
 
   const showModal = () => {
@@ -13,14 +18,14 @@ const MoviePoster = ({ imgSrc, grade, index }) => {
 
   return (
     <MoviePosterImage onClick={showModal}>
-      {isShow && <Modal imgSrc={imgSrc} />}
+      {isShow && <Modal imgSrc={IMG} overview={movieOverview} />}
       {grade ? (
         <>
           <Test2 alt="rankedMovie" src={grade[index]} />
-          <Test2 alt="rankedMovie" src={imgSrc} />
+          <Test2 alt="rankedMovie" src={IMG} />
         </>
       ) : (
-        <Test alt="rankedMovie" src={imgSrc} />
+        <Test alt="rankedMovie" src={IMG} />
       )}
     </MoviePosterImage>
   );

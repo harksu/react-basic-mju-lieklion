@@ -3,7 +3,7 @@ import { useRecoilState } from "recoil";
 import styled from "styled-components";
 import { isModal } from "../atoms/atom";
 
-const Modal = ({ imgSrc }) => {
+const Modal = ({ imgSrc, overview }) => {
   const [, setIsShow] = useRecoilState(isModal);
   const closeModal = () => {
     setIsShow(false);
@@ -16,11 +16,7 @@ const Modal = ({ imgSrc }) => {
           <MovieLimitText>
             98% 일치 2022 18 에피소드6개 HD ADD 댓글그림
           </MovieLimitText>
-          <MovieStoryText>
-            이 영화의 내용은 이러이러하고 저러러저러 하다 이 영화의 내용은
-            이러이러하고 저러러저러 하하다
-            <br />이 영화의 내용은 이러이러하고 저러러저러 하하다
-          </MovieStoryText>
+          <MovieStoryText>{overview}</MovieStoryText>
         </ModalMovieStory>
         <ModalMovieActor>
           <MovieActorText>출연 : 임학수</MovieActorText>
