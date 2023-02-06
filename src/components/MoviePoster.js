@@ -21,11 +21,11 @@ const MoviePoster = ({ imgItem, grade, index }) => {
       {isShow && <Modal imgSrc={IMG} overview={movieOverview} />}
       {grade ? (
         <>
-          <Test2 alt="rankedMovie" src={grade[index]} />
-          <Test2 alt="rankedMovie" src={IMG} />
+          <LankedPoster alt="rankedMovie" src={grade[index]} />
+          <LankedPoster alt="rankedMovie" src={IMG} />
         </>
       ) : (
-        <Test alt="rankedMovie" src={IMG} />
+        <Poster alt="rankedMovie" src={IMG} />
       )}
     </MoviePosterImage>
   );
@@ -41,13 +41,12 @@ const MoviePosterImage = styled.div`
   }
 `;
 
-const Test = styled.img`
-  //object-fit: cover;
+const Poster = styled.img`
   width: 300px;
   height: 200px;
 `;
 
-const Test2 = styled(Test)`
+const LankedPoster = styled(Poster)`
   width: 150px;
   height: 250px;
 `;
