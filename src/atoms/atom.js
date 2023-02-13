@@ -14,3 +14,8 @@ export const isModal = atom({
   key: "modal",
   default: false,
 });
+
+export const count = atom({
+  key: "count",
+  default: 0,
+});
