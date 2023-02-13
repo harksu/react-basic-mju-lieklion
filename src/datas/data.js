@@ -8,3 +8,12 @@ export const VICTORY_CONDITION = [
   [0, 4, 8],
   [2, 4, 6],
 ];
+
+export const MENU_ARRAY = [
+  "홈",
+  "시리즈",
+  "영화",
+  "NEW!요즘 대세 콘텐츠",
+  "내가 찜한 콘텐츠",
+  "언어별로 찾아보기",
+];

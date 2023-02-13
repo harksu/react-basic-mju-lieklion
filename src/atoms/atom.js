@@ -9,3 +9,8 @@ export const pickCell = atom({
   key: "pick",
   default: [0, 1, 2, 3, 4, 5, 6, 7, 8],
 });
+
+export const isModal = atom({
+  key: "modal",
+  default: false,
+});
